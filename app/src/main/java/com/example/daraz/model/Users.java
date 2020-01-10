@@ -6,12 +6,14 @@ public class Users {
     private String Email;
     private String PhoneNo;
     private String Password;
+    private String SMS;
 
-    public Users(String fullName, String email, String phoneNo, String password) {
+    public Users(String fullName, String email, String password, String phoneNo, String sms) {
         FullName = fullName;
         Email = email;
         PhoneNo = phoneNo;
         Password = password;
+        SMS = sms;
     }
 
     public String getFullName() {
@@ -40,6 +42,14 @@ public class Users {
 
     public String getPassword() {
         return Password;
+    }
+
+    public String getSMS() {
+        return SMS;
+    }
+
+    public void setSMS(String SMS) {
+        this.SMS = SMS;
     }
 
     public void setPassword(String password) {

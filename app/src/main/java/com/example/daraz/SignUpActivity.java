@@ -73,6 +73,12 @@ public class SignUpActivity extends AppCompatActivity {
                     return;
                 }
                 Intent intent = new Intent(SignUpActivity.this, SignUpEmailActivity.class);
+                String No = PhoneNo.getText().toString();
+                String sms = SMS.getText().toString();
+                Bundle bundle = new Bundle();
+                bundle.putString("PhoneNo", No);
+                bundle.putString("SMS", sms);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
